@@ -1,0 +1,181 @@
+body{
+    font-family: sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+}
+.back{
+    position: fixed;
+    top: 40px;
+    left: 40px;
+    display: flex;
+    flex-direction: column;
+}
+.list ul{
+    list-style: none;
+    padding-top: 5px;
+}
+.list ul li{
+    display: flex;
+    list-style: none;
+    font-size: 16px;
+
+}
+.list ul li a{
+    text-decoration: none;
+    opacity: 0;
+    padding: 2px;
+   
+}
+.list ul li a:hover{
+    color: black;
+    transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+}
+.list ul.ullist li::after {
+    content: '';
+    position: absolute;
+    left: 12px;
+    width: 10px;
+    height: 10px;
+    padding: 1px;
+    border-radius: 50%;
+    background: grey;
+    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    opacity: 0;
+}
+.active a{
+    color: darkslategray;
+}
+.list ul.ullist li:not(:last-child)::before{
+    content: '';
+    position: absolute;
+    left: 17px;
+    margin-top: 10px;
+    width: 2px;
+    height: 18px;
+    background: grey;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    opacity: 0;
+}
+.list ul.ullist li:not(:last-child)::after{
+    background: blue;
+}
+.list ul.links li a{
+    color: rgb(140, 143, 143);
+    padding: 2px 10px; 
+    opacity: 0;
+    font-weight: bold;
+    margin: 2px;
+
+}
+.list ul.links li a:hover{
+    color: darkslategray;
+    transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+}
+div .round{
+    width: 40px;
+    height: 40px;
+    background: rgb(196, 189, 189);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: relative;
+    
+}
+div .round::after{
+   content: '';
+   width: 4px;
+   height: 15px;
+   background: blue;
+   position: absolute;
+   left: 15px;
+   top: 6px;
+   transform: rotate(45deg);
+   
+}
+div .round::before{
+    content: '';
+    width: 4px;
+    height: 15px;
+    background: blue;
+    position: absolute;
+    left: 15px;
+    top: 16px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+}
+
+div .line{
+    width: 4px;
+    height: 17px;
+    background: blue;
+    position: absolute;
+    top: 10px;
+    left: 18px;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+}
+div .backward{
+    display: flex;
+    position: relative;
+    
+}
+div .backward span{
+    position: absolute;
+    top: 12px;
+    left: 45px;
+    color: blue;
+    font-weight: 500;
+    opacity: 0;
+
+}
+.back:hover span{
+    opacity:1;
+    transition: 0.1s ease-in-out;
+    -webkit-transition: 0.1s ease-in-out;
+    -moz-transition: 0.1s ease-in-out;
+    -ms-transition: 0.1s ease-in-out;
+    -o-transition: 0.1s ease-in-out;
+}
+.back:hover  ul.ullist li a,
+.back:hover  ul.ullist li::after,
+.back:hover  ul.ullist li::before
+{
+    opacity: 1;
+}
+.back:hover  ul.links li a{
+    opacity: 1;
+}
